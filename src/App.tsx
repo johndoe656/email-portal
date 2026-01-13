@@ -51,13 +51,13 @@ export default function HiringPortal() {
     img.onerror = () => {
       setLogoLoading(false);
       setLogoError(true);
-    };
+    }Storage.;
     img.src = url;
   };
 
   const loadSentEmails = async () => {
     try {
-      const result = await window.Storage.get('sent-emails-list');
+      const result = await localStorage.getItem('sent-emails-list');
       if (result && result.value) {
         setSentEmails(JSON.parse(result.value));
       }
@@ -68,7 +68,7 @@ export default function HiringPortal() {
 
   const loadCompanySettings = async () => {
     try {
-      const result = await window.Storage.get('company-settings');
+      const result = await localStorage.getItem('company-settings');
       if (result && result.value) {
         setCompanySettings(JSON.parse(result.value));
       }
@@ -80,7 +80,7 @@ export default function HiringPortal() {
   const saveCompanySettings = async (settings: React.SetStateAction<{ companyName: string; logoUrl: string; }>) => {
     setCompanySettings(settings);
     try {
-      await window.Storage.set('company-settings', JSON.stringify(settings));
+      await localStorage.setItem('company-settings', JSON.stringify(settings));
     } catch (error) {
       console.error('Error saving settings:', error);
     }
@@ -98,7 +98,7 @@ export default function HiringPortal() {
     setSentEmails(updatedEmails);
     
     try {
-      await window.Storage.set('sent-emails-list', JSON.stringify(updatedEmails));
+      await localStorage.setItem('sent-emails-list', JSON.stringify(updatedEmails));
     } catch (error) {
       console.error('Error saving email:', error);
     }
@@ -108,7 +108,7 @@ export default function HiringPortal() {
     if (window.confirm('Are you sure you want to clear all email history? This cannot be undone.')) {
       setSentEmails([]);
       try {
-        await window.Storage.delete('sent-emails-list');
+        await localStorage.removeItem('sent-emails-list');
         alert('Email history cleared successfully!');
       } catch (error) {
         console.error('Error clearing history:', error);

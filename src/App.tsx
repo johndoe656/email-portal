@@ -51,7 +51,7 @@ export default function HiringPortal() {
     img.onerror = () => {
       setLogoLoading(false);
       setLogoError(true);
-    }Storage.;
+    };
     img.src = url;
   };
 

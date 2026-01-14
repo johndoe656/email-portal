@@ -193,7 +193,7 @@ export default function HiringPortal() {
             <td style="background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%); padding: 50px 40px; text-align: center;">
               <img src="${logoUrl}" alt="${companyName}" style="max-width: 220px; height: auto; margin-bottom: 24px; display: block; margin-left: auto; margin-right: auto;">
               <h1 style="color: #ffffff; margin: 0; font-size: 32px; font-weight: 700;">Welcome to the Team!</h1>
-              <p style="color: rgba(255,255,255,0.9); margin: 12px 0 0 0; font-size: 16px;">You've been selected for an exciting opportunity</p>
+              <p style="color: rgba(255,255,255,0.9); margin: 12px 0 0 0; font-size: 16px;">You've been selected for an exciting remote opportunity</p>
             </td>
           </tr>
 
@@ -224,7 +224,7 @@ export default function HiringPortal() {
                 <tr>
                   <td style="padding: 28px;">
                     <h2 style="color: #1e40af; font-size: 20px; font-weight: 700; margin: 0 0 16px 0;">🎯 What Happens Next</h2>
-                    <p style="color: #1e40af; font-size: 15px; margin: 0 0 16px 0;">Our onboarding team will contact you within <strong>24-48 hours</strong> with details about:</p>
+                    <p style="color: #1e40af; font-size: 15px; margin: 0 0 16px 0;">Our onboarding team will be in touch with you with further details about:</p>
                     <table width="100%" cellpadding="0" cellspacing="0">
                       <tr><td style="padding: 8px 0; color: #475569; font-size: 15px;"><span style="color: #2563eb; font-weight: bold;">✓</span> Your start date and orientation schedule</td></tr>
                       <tr><td style="padding: 8px 0; color: #475569; font-size: 15px;"><span style="color: #2563eb; font-weight: bold;">✓</span> Required documentation and paperwork</td></tr>
